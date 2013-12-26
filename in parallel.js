@@ -1,7 +1,7 @@
 function async(arg, callback) {
 	console.log('do something with \'' + arg + '\', return 1 sec later');
 	setTimeout(function() {
-		callback(arg * 2);
+			callback(arg * 2);
 	}, 1000);
 }
 
