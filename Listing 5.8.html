@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="assert.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="results"></div>
+    <button id="test">Click Me!</button>
+    <script type="text/javascript">
+
+        function bind(context, name) {
+            return function() {
+                return context[name].apply(context,arguments);
+            }
+        }
+
+        var button = {
+                clicked: false,
+                click: function() {
+                        this.clicked = true;
+                        assert(button.clicked, "The button has been clicked");
+                        console.log(this);
+                }
+        };
+
+        var elem = document.getElementById("test");
+        elem.addEventListener("click", bind(button, "click"), false);
+
+        </script>
+</body>
+</html>

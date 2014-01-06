@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39">
+        <title></title>
+    </head>
+    <body>
+        <div>
+            DIV 0
+        </div>
+        <div>
+            DIV 1
+        </div>
+        <div>
+            DIV 2
+        </div>
+        <script type="text/javascript">
+
+            var div = document.getElementsByTagName('div');
+            for (var i = 0; i < div.length; i++) (function(n){
+                div[n].addEventListener("click", function() {
+                    alert('div #' + n + ' was clicked.');
+                }, false);
+            })(i);
+
+        </script>
+    </body>
+</html>
