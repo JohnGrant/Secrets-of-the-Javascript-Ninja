@@ -1,0 +1,35 @@
+<!doctype html public>
+<!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>Listing 6.1</title>
+
+  	<meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="assert.js"></script>
+</head>
+<body>
+    <div id="results"></div>
+	<script type="text/javascript">
+		function Ninja() {};
+
+		Ninja.prototype.swingSword = function() {
+			return true;
+		}
+
+		var ninja1 = Ninja();
+		assert(ninja1 === undefined,
+			"No instance of Ninja created.");
+
+		var ninja2 = new Ninja();
+		assert(ninja2 
+			&& ninja2.swingSword 
+			&& ninja2.swingSword(),
+			"And when I swing my sword they all chopable.");
+	</script>
+</body>
+</html>
